@@ -1,0 +1,49 @@
+#
+#           project:    day18.py
+#            author:    Jaxson Santiago <jsantiago2709265@woonsocketschools.com>
+#           version:    2024.10.8.05
+#
+#   description: Rock, Paper, Scissors, Lizard, Spock for one person
+#
+import random
+isPlaying = True
+while isPlaying:
+    choices = ["rock", "paper", "scissors", "spock", "lizard"]
+    playerChoice = input("Choose rock, paper, scissors, lizard, or spock : ").lower()
+    aiChoice = random.choice(choices)
+
+    if playerChoice in choices:
+
+        if playerChoice == aiChoice:
+
+            print("It's a tie!")
+
+        elif (
+
+            (playerChoice == "rock" and aiChoice == "scissors")
+            or (playerChoice == "paper" and aiChoice == "rock")
+            or (playerChoice == "scissors" and aiChoice == "paper")
+            or (playerChoice == "rock" and aiChoice == "lizard")
+            or (playerChoice == "lizard" and aiChoice == "spock")
+            or (playerChoice == "spock" and aiChoice == "scissors")
+            or (playerChoice == "scissors" and aiChoice == "lizard")
+            or (playerChoice == "lizard" and aiChoice == "paper")
+            or (playerChoice == "paper" and aiChoice == "spock")
+            or (playerChoice == "spock" and aiChoice == "rock")
+
+    ):
+
+            print("The player has chosen", playerChoice, "and the bot has chosen", aiChoice, "you win!")
+
+
+    else:
+
+            print("The player has chosen", playerChoice, "and the bot has chosen", aiChoice, "the computer wins!")
+
+    ask = input("Would you like to play again? : ")
+
+    if ask != "yes":
+
+        print("I was having fun...")
+
+        isPlaying = False
