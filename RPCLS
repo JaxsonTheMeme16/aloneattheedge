@@ -6,22 +6,16 @@
 #   description: Rock, Paper, Scissors, Lizard, Spock for one person
 #
 import random
-
 isPlaying = True
 
-while isPlaying:
-
-
+while isPlaying is True:
     choices = ["rock", "paper", "scissors", "spock", "lizard"]
-
     choice = input("Choose rock, paper, scissors, lizard, or spock : ").lower()
 
-    aiChoice = random.choice(choices)
+    aiChoice = random.choice(choices) 
 
     if choice in choices:
-
         if choice == aiChoice:
-
             print("It's a tie!")
 
         elif (
@@ -39,17 +33,12 @@ while isPlaying:
 
     ):
 
-            print("The player has chosen", choice, "and the bot has chosen", aiChoice, "you win!")
-
-
+            print(f"The player has chosen {choice} and the bot has chosen", aiChoice, "you win!")
     else:
 
             print("The player has chosen", choice, "and the bot has chosen", aiChoice, "the computer wins!")
 
     ask = input("Would you like to play again? : ")
-
     if ask != "yes":
-
         print("I was having fun...")
-
         isPlaying = False
